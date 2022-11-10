@@ -56,6 +56,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+ 
 /* .swiper-button-next {
     background-image: url(../../Images/reshot-icon-arrow-right-WXQ5M6F278.svg) !important;
     background-repeat: no-repeat;
@@ -100,4 +101,12 @@ body {
    
    
      }
+     
+  }
+  @media screen and (min-width: 1px) and (max-width: 992px)  {
+    .MainSwipesDiv img {
+      width: 100% !important;
+      height: 350px;
+  }
+     
   }

@@ -174,10 +174,7 @@
     font-size: 22px;
 
 }
-.MainSwipesDiv img {
-    width: 650px;
-    height: 650px;
-}
+
 .CardsProMainDiv {
     display: flex;
     gap: 100px;
@@ -216,10 +213,7 @@
     margin: 0;        
     }
    
-    .MainSwipesDiv img {
-        width: 400px !important;
-        height: 350px;
-    }
+
     .MainContNAvbar div h2 {
         font-size: 28px;
         color: #326fa8;

@@ -228,6 +228,9 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; */
     }
+    .CartIcoMainCol span {
+        margin: 0 !important;
+    }
   }
   .CardsProMainCard {
     border-radius: 25px 25px 0 0 !important;

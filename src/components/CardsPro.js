@@ -10,6 +10,7 @@ import { Cookie } from '@mui/icons-material';
 // import {Link} from 'react-router-dom';
 
 const CardsPro = ({ product, onAddToCart}) => {
+
     // const counter = useContext (UserContext);
 
     // const [counter, setCounter] = useState(0)
@@ -47,7 +48,7 @@ const CardsPro = ({ product, onAddToCart}) => {
     </Card>
           ))}
 </div> */}
-   <div className='CardsProMainDiv container-fluid '>
+   <div className='CardsProMainDiv container-fluid     ' >
         
         <Card key={product.id} className='CardsProMainCard ' style={{ width: '18rem' }}>
           <div className='CardimgDiv'>

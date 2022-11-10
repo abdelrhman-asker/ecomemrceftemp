@@ -6,10 +6,17 @@ import { Col, Container, Row } from 'reactstrap'
 import CardsPro from './CardsPro'
 import MainNav from "./MainNav"
 import Swiper from "./Swiper/Swiper"
+import WOW from 'wowjs';
 
 const Home = ({products, onAddToCart, totalItems, cart}) => {
- 
+  // new WOW.WOW().init();
+
   
+  new WOW.WOW({
+    live: false
+  }).init();
+
+
 
 
   const [number, setNumbere] = React.useState(0)
@@ -26,6 +33,8 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
   const [loading , setLoading] = useState(false);
   useEffect(() =>{
           setLoading(true)
+          new WOW.WOW().init();
+
           setTimeout(() =>{
               setLoading(false)
   
@@ -42,7 +51,7 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
       <Row>
 {products.map((product) => (
     
-        <Col  md="4" sm="12" className='m-auto'  key={product.id}>
+        <Col  md="4" sm="12" className='m-auto animate__backInDown wow' data-wow-duration="1.5s" data-wow-delay="0s" data-wow-iteration="1" data-wow-offset="80"  key={product.id}>
       <CardsPro onAddToCart={onAddToCart} product={product}  cart={cart}   />
       </Col>
   ))}

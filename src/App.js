@@ -8,6 +8,9 @@ import Cart from "./components/Cart"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import 'animate.css';
 import { Provider } from 'react-redux';
+import { ScaleLoader } from 'react-spinners'
+import { RingLoader } from 'react-spinners'
+
 // import Store from './Store/Store';
 // import Counter from './components/Counter';
 
@@ -56,7 +59,7 @@ const App = () => {
   }, []);
 
   // console.log(products); // 2 product 
-  console.log(cart); //
+  // console.log(cart); //
 
 
 // const [count, setCount] = useState(0)
@@ -68,24 +71,44 @@ const App = () => {
 // with ternary operator
   //  {count<0 && setCount(0) }
 
+
+
+  // const [loading , setLoading] = useState(false);
+  // useEffect(() =>{
+  //         setLoading(true)
+
+  //         setTimeout(() =>{
+  //             setLoading(false)
+  
+  //         } , 2000)
+  
+  //     },[])
   return (
     // <Provider  store={Store}>
 
-    <div>
-
-    <BrowserRouter>
+    <div style={{position:"relative"}}>
+{/* {      loading 
+    ? 
+    <RingLoader  color="rgba(0, 1, 255, 1)"
+    size={300}
+     style={{position:"fixed", left:"calc(50vw - 150px)" , top:"calc(50vh - 150px"} }  /> 
+: */}
+<BrowserRouter>
+    
     <MainNav cart={cart}   className="NavHeightOnHome"  />  
 
-      <Routes>
-        <Route path='/' element={<Home products={products} cart={cart} onAddToCart={handleAddToCart}/>} />
-        <Route path='/cart' element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart}/>} />
-        
-        {/* <Route /> */}
-      
-      </Routes>
+<Routes>
+  <Route path='/' element={<Home products={products} cart={cart} onAddToCart={handleAddToCart}/>} />
+  <Route path='/cart' element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart}/>} />
+  
+  {/* <Route /> */}
 
+</Routes>
 
     </BrowserRouter>
+
+
+    
     {/* <Counter  store={Store} /> */}
     </div>    
     // </Provider>

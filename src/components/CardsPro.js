@@ -32,7 +32,7 @@ const CardsPro = ({ product, onAddToCart}) => {
         //   })
         // }, [])
   return (
-    <div>
+    <div >
         {/* <div className='CardsProMainDiv container-fluid'>
         {cards.slice(0, 4).map((cards => 
         <Card key={cards.id} className='CardsProMainCard' style={{ width: '18rem' }}>

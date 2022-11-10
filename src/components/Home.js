@@ -12,11 +12,8 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
   // new WOW.WOW().init();
 
   
-  new WOW.WOW({
-    live: false
-  }).init();
-
-
+  
+  
 
 
   const [number, setNumbere] = React.useState(0)
@@ -45,13 +42,14 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
     <>
      {/* <MainNav totalItems={totalItems}  number={number} className="NavHeightOnHome"  />   */}
      <Swiper className="SwiperHeightOnHome" /> 
+     <div >
      {
-      loading == true? <ScaleLoader style={{display:"flex", justifyContent:"center", alignItems:"center", height:"300px"} } color="#36d7b7" /> :
+      loading? <ScaleLoader style={{display:"flex", justifyContent:"center", alignItems:"center", height:"300px"} } color="#36d7b7" /> :
       <Container >
       <Row>
 {products.map((product) => (
     
-        <Col  md="4" sm="12" className='m-auto animate__backInDown wow' data-wow-duration="1.5s"  data-wow-iteration="1"   key={product.id}>
+        <Col  md="4" sm="12" className='m-auto  '    key={product.id}>
       <CardsPro onAddToCart={onAddToCart} product={product}  cart={cart}   />
       </Col>
   ))}
@@ -60,7 +58,7 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
     </Container>
 
      }
-    
+    </div>
     </>
   )
 }

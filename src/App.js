@@ -95,7 +95,7 @@ const App = () => {
 : */}
 <BrowserRouter>
     
-    <MainNav cart={cart}   className="NavHeightOnHome"  />  
+    <MainNav cart={cart} style={{zIndex:"9999999"}}  className="NavHeightOnHome"  />  
 
 <Routes>
   <Route path='/' element={<Home products={products} cart={cart} onAddToCart={handleAddToCart}/>} />

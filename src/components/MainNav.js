@@ -30,7 +30,7 @@ const MainNav = ({ cart }) => {
 
   
   return (
-<div>
+<div >
  
 <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark">
       <Container fluid className="MainContNAvbar" style={{height:"8vh"}}>

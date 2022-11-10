@@ -33,7 +33,7 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
   const [loading , setLoading] = useState(false);
   useEffect(() =>{
           setLoading(true)
-          new WOW.WOW().init();
+          // new WOW.WOW().init();
 
           setTimeout(() =>{
               setLoading(false)

@@ -46,7 +46,7 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
      {/* <MainNav totalItems={totalItems}  number={number} className="NavHeightOnHome"  />   */}
      <Swiper className="SwiperHeightOnHome" /> 
      {
-      loading? <ScaleLoader style={{display:"flex", justifyContent:"center", alignItems:"center", height:"300px"} } color="#36d7b7" /> :
+      loading == true? <ScaleLoader style={{display:"flex", justifyContent:"center", alignItems:"center", height:"300px"} } color="#36d7b7" /> :
       <Container >
       <Row>
 {products.map((product) => (

@@ -51,7 +51,7 @@ const Home = ({products, onAddToCart, totalItems, cart}) => {
       <Row>
 {products.map((product) => (
     
-        <Col  md="4" sm="12" className='m-auto animate__backInDown wow' data-wow-duration="1.5s" data-wow-delay="0s" data-wow-iteration="1" data-wow-offset="80"  key={product.id}>
+        <Col  md="4" sm="12" className='m-auto animate__backInDown wow' data-wow-duration="1.5s"  data-wow-iteration="1"   key={product.id}>
       <CardsPro onAddToCart={onAddToCart} product={product}  cart={cart}   />
       </Col>
   ))}
